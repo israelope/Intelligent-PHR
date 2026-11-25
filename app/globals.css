@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef3fb;
+  --color-brand-100: #dbe6f7;
+  --color-brand-600: #2c3e63;
+  --color-brand-700: #243352;
+}
+
+@layer base {
+  body {
+    background-color: #f7f8fa;
+    color: #1b2a4a;
+  }
+}
+
+@utility card {
+  @apply rounded-xl border border-gray-200 bg-white shadow-xs;
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-4 py-2
+         text-sm font-semibold text-white transition-colors hover:bg-brand-700
+         disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg border border-gray-300
+         bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition-colors
+         hover:bg-gray-50;
+}
+
+@utility input {
+  @apply w-full rounded-lg border border-gray-300 px-3 py-2 text-sm
+         focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-brand-600;
+}
+
+@utility label {
+  @apply mb-1 block text-sm font-medium text-gray-700;
+}
